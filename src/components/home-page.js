@@ -81,7 +81,7 @@ export default function Home(){
         const formData = new FormData();
         formData.append('file', file);
 
-        fetch(`http://localhost:8084/salary/upload`, {
+        fetch(`http://192.168.159.27:8084/salary/upload`, {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${getAccessToken()}`,
@@ -164,7 +164,7 @@ export default function Home(){
     //     };
 
     //     // Send the user data to the backend using Fetch API
-    //     fetch("http://localhost:8084/salary/add", {
+    //     fetch("http://192.168.159.27:8084/salary/add", {
     //         method: "POST",
     //         headers: {
     //             "Content-Type": "application/json",
@@ -212,7 +212,7 @@ export default function Home(){
         };
 
         // Send the user data to the backend using Fetch API
-        fetch("http://localhost:8084/salary/add", {
+        fetch("http://192.168.159.27:8084/salary/add", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -325,7 +325,7 @@ export default function Home(){
 
     function fetchDataFromBackend() {
         // Fetch data from your backend API
-        fetch("http://localhost:8084/salary/list", {
+        fetch("http://192.168.159.27:8084/salary/list", {
             method: "GET",
             headers: {
                 'Content-type': 'application/json',
@@ -345,7 +345,7 @@ export default function Home(){
 
     function fetchDataFromBackendExpired() {
         // Fetch data from your backend API
-       fetch("http://localhost:8084/salary/expired", {
+       fetch("http://192.168.159.27:8084/salary/expired", {
            method: "GET",
            headers: {
                "Authorization": `Bearer ${getAccessToken()}`, // Include the token in the Authorization header
@@ -363,7 +363,7 @@ export default function Home(){
 
     function fetchDepartmentsAndPopulateDropdown() {
         // Fetch departments from your backend API
-        fetch("http://localhost:8084/salary/departments", {
+        fetch("http://192.168.159.27:8084/salary/departments", {
             method: "GET",
             headers: {
                 "Authorization": `Bearer ${getAccessToken()}`, // Include the token in the Authorization header
@@ -481,7 +481,7 @@ export default function Home(){
 
 
     //     // Send the updated user data to the backend using Fetch API
-    //     fetch("http://localhost:8084/salary/update", {
+    //     fetch("http://192.168.159.27:8084/salary/update", {
     //         method: "PUT",
     //         headers: {
     //             "Content-Type": "application/json",
@@ -530,7 +530,7 @@ export default function Home(){
 
 
         // Send the updated user data to the backend using Fetch API
-        fetch("http://localhost:8084/salary/update", {
+        fetch("http://192.168.159.27:8084/salary/update", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -579,7 +579,7 @@ export default function Home(){
 
 
     //     // Send the updated user data to the backend using Fetch API
-    //     fetch("http://localhost:8084/salary/update", {
+    //     fetch("http://192.168.159.27:8084/salary/update", {
     //         method: "PUT",
     //         headers: {
     //             "Content-Type": "application/json",
@@ -630,7 +630,7 @@ export default function Home(){
 
 
         // Send the updated user data to the backend using Fetch API
-        fetch("http://localhost:8084/salary/update", {
+        fetch("http://192.168.159.27:8084/salary/update", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -663,7 +663,7 @@ export default function Home(){
             const idToDelete = parseInt(userId, 10);
 
             // Call the API to delete the user using the integer idToDelete
-            fetch(`http://localhost:8084/salary/delete/${idToDelete}`, {
+            fetch(`http://192.168.159.27:8084/salary/delete/${idToDelete}`, {
                 method: "DELETE",
                 headers: {
                     "Authorization": `Bearer ${getAccessToken()}`,

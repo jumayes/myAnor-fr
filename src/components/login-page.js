@@ -17,7 +17,7 @@ export default function LoginPage() {
           password
         };
 
-        fetch('http://localhost:8084/auth/login', {
+        fetch('http://192.168.159.27:8084/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
